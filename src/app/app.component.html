@@ -1,0 +1,16 @@
+<mat-toolbar color="primary">
+  <span>Event Management Project</span>
+  <span class="example-spacer"></span>
+  <span>SDP (Skill Development Project)</span>
+</mat-toolbar>
+
+<mat-list>
+  <mat-list-item *ngFor="let i of sevenwonders">
+    {{ i.name }}
+    <span class="example-spacer"></span>
+    <button mat-flat-button color="accent" routerLink="/{{ i.link }}">
+      Book Event
+    </button>
+  </mat-list-item>
+</mat-list>
+<router-outlet></router-outlet>
